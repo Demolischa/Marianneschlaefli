@@ -33,10 +33,10 @@ time, mark, audio, video {
 }
 
 h1 {
-    font-family: 'Carattere', cursive;
-    color: #DB545A;
-    font-size: 40px;
-    font-weight: 200;
+    font-family: 'Special Elite', cursive;
+    color: #365581;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 h2 {
@@ -45,14 +45,15 @@ h2 {
 }
 
 h3 {
-    font-family: 'Carattere', cursive;
-    color: #DB545A;
-    font-size: 40px;
-    font-weight: 200;
+    font-family: 'Special Elite', cursive;
+    color: #365581;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 20px;
 }
 
 h4 {
-    font-family: 'Carattere', cursive;
+    font-family: 'Special Elite', cursive;
     color: #303030;
     font-size: 30px;
     text-align: center;
@@ -82,37 +83,50 @@ header {
 
 header a {
     color: black;
-    padding: 12px;
+    padding: 12px 26px;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
-    border-radius: 4px;
-    margin-right: 15px;
     white-space: nowrap;
 }
 
-header a.categorie:hover:nth-child(even) {
+/*------------ Categorie eins -------------*/
+
+.categorie {
+    width: 100%;
+    text-align: center;
+}
+
+header a.categorieeins:hover {
     color: black;
     background-image: url(img/Fuss-02.svg);
     background-size: 100% 100%;
 }
 
-header a.categorie:hover {
+header a.categorieeins.active {
+    color: #365581;
+    background-image: url(img/Fuss-02.svg);
+    background-size: 100% 100%;
+}
+
+/*------------ Categorie zwei -------------*/
+
+header a.categoriezwei:hover {
     color: black;
     background-image: url(img/Fuss-01.svg);
     background-size: 100% 100%;
 }
 
-header a.categorie.active {
-    color: #DB545A;
-    background-image: url(img/Fuss-02.svg);
+header a.categoriezwei.active {
+    color: #365581;
+    background-image: url(img/Fuss-01.svg);
     background-size: 100% 100%;
 }
+
+/*------------------ Logo -----------------*/
 
 .logo {
     padding-top: 17px;
-    background-image: url(img/Fuss-01.svg);
-    background-size: 100% 100%;
 }
 
 .topnav .icon {
@@ -125,7 +139,7 @@ header a.categorie.active {
 }
 
 .headerImg {
-    background-image: url(img/Header.png);
+    background-image: url(img/Header2_neu.png);
     width: 100%;
     height: 800px;
     background-position: bottom;
@@ -144,12 +158,36 @@ header a.categorie.active {
     margin: 0 200px;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .containerButton {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 100px 0;
+  width: 500px;
+  height: 200px;
+  background-image: url(img/Fuss-01.svg);
+  background-size: 100% 100%;
+  cursor: pointer;
 }
+
+.containerButton:hover {
+    background-image: url(img/Fuss-01_blau.svg);
+}
+
+.containerButton a {
+    font-family: 'Special Elite', cursive;
+    color: #365581;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+/*--------------------- Cards ----------------------*/
 
 .Text {
     margin-bottom: 100px;
@@ -177,55 +215,212 @@ li {
     list-style-type: disc;
 }
 
-ul {
+.listebild {
     padding: 20px 40px;
-    border-bottom: 1px solid #DB545A;
-    border-left: 1px solid #DB545A;
-    border-right: 1px solid #DB545A;
+    border-bottom: 1px solid #365581;
+    border-left: 1px solid #365581;
+    border-right: 1px solid #365581;
     border-radius: 0px 0px 5px 5px;
     max-width: 210px;
     margin: 0 10px;
     height: 280px;
 }
 
-.btn {
-    font-family: 'Carattere', cursive;
-    font-size: 40px;
-    color: #fff;
-    background-color: #db545a;
-    padding: 10px 30px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.537) 4px 4px 8px 0px;
-    border-radius: 5px;
-    transition : 1000ms;
-    transform: translateY(0);
+/*----------------- flip card ------------------*/
+
+  .cards_item {
     display: flex;
-    flex-direction: row;
+    padding: 1rem;
+  }
+  
+  .card_image {
+    position: relative;
+  }
+  
+  .card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /*
+  .card_price {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    cursor: pointer;
-    background-image: url(img/Fuss-02.svg);
-    background-size: 100% 100%;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #365581;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .card_price span {
+    font-size: 12px;
+    margin-top: -2px;
+  }
+  */
+
+  .note {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    border-radius: 0.25rem;
+    background-color: #365581;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .cardnew {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 300px;
+  }
+  
+  .card_content {
+    position: relative;
+    padding: 16px 12px 32px 24px;
+    margin: 16px 8px 8px 0;
+  }
+  
+  .card_content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .card_content::-webkit-scrollbar-track {
+    box-shadow: 0;
+    border-radius: 0;
+  }
+  
+  .card_content::-webkit-scrollbar-thumb {
+    background: #365581;
+    border-radius: 15px;
+  }
+  
+  .card_title {
+    position: relative;
+    margin: 0 0 24px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .card_title::after {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #365581;
+    content: "";
+  }
+  
+  hr {
+    margin: 24px auto;
+    width: 50px;
+    border-top: 2px solid #365581;
+  }
+  
+  .card_text p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .card_text p:last-child {
+    margin: 0;
+  }
+
+  ul {
+    display: block;
+    padding-left: 15px;
+  }
+  
+  ul li {
+    display: block;
+    position: relative;
+  }
+  
+  ul li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  
+  ul li:before {
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: -20px;
+    margin-top: -.9em;
+    background: #B1CBF0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+  
+
+/*--------------------- Testimonial -----------------------*/
+blockquote {
+    font-family: 'Special Elite', cursive;
+    color: #3f3f5a;
+	font-weight: 100;
+	font-size: 2rem;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
 }
-    
-.btn:hover{
-    transition : 1000ms;
-    padding: 10px 50px;
-    transform : translateY(-0px);
-    background-color: #fff;
-    color: #db545a;
-    border: solid 2px #db545a;
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #f1efe6;
+	font-size: 8rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -5rem;
+	top: -2rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -5rem;
+	bottom: 1rem;
+}
+
+cite {
+	line-height: 3;
+	text-align: left;
+    font-family: 'Inter', sans-serif; 
+    font-size: 14px;
 }
 
 /* ---------------- Footer ----------------*/
 
 .Line {
-    background-color: #DB545A;
+    background-color: #365581;
     width: 100%;
     height: 5px;
 }
 
 footer {
-    background-color: #FAE6E7;
+    background-color: #B1CBF0;
     display: flex;
     justify-content: center;
     padding: 80px 0;
@@ -244,8 +439,8 @@ footer {
         flex-direction: row;
     }
 
-    ul {
-        border: 1px solid #DB545A;
+    .listebild {
+        border: 1px solid #365581;
         border-radius: 5px;
         width: 500px;
     }
@@ -279,7 +474,7 @@ footer {
     }
 
     .logo {
-        width: 80%;
+        width: 50%;
     }
 
     .topnav.responsive {
@@ -291,7 +486,7 @@ footer {
     .topnav.responsive .icon {
       position: absolute;
       right: 10px;
-      top: 39px;
+      top: 35px;
     }
 
     .topnav {
@@ -326,7 +521,7 @@ footer {
         flex-direction: column;
     }
 
-    ul {
+    .listebild {
         border-top: none;
         border-radius: 0px 0px 5px 5px;
     }
