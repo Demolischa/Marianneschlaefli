@@ -65,6 +65,13 @@ p {
     line-height: 28px;
 }
 
+strong {
+  font-weight: 800;
+  ont-family: 'Special Elite', cursive;
+    color: #365581;
+    font-size: 25px;
+}
+
 a {
     font-family: 'Inter', sans-serif;
 }
