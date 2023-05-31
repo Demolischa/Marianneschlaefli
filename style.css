@@ -195,11 +195,9 @@ header a.categoriezwei.active {
 
 .cards {
     display: flex;
-    justify-content: center;
     margin-bottom: 100px;
-    flex-wrap: nowrap;
-    gap: 20px;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .cardTitle {
@@ -231,6 +229,7 @@ li {
   .cards_item {
     display: flex;
     padding: 1rem;
+    justify-content: center;
   }
   
   .card_image {
@@ -263,7 +262,6 @@ li {
     font-size: 12px;
     margin-top: -2px;
   }
-  */
 
   .note {
     position: absolute;
@@ -275,7 +273,8 @@ li {
     font-size: 14px;
     font-weight: 700;
   }
-  
+   */
+
   .cardnew {
     background-color: white;
     border-radius: 0.25rem;
@@ -283,7 +282,10 @@ li {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    max-width: 300px;
+  }
+
+  .maxwidth {
+    width: 300px;
   }
   
   .card_content {
