@@ -97,6 +97,10 @@ header a {
     white-space: nowrap;
 }
 
+.flex {
+  display: flex;
+}
+
 /*------------ Categorie eins -------------*/
 
 .categorie {
@@ -130,7 +134,7 @@ header a.categoriezwei.active {
     background-size: 100% 100%;
 }
 
-/*------------------ Logo -----------------*/
+/*------------------ Navigation & Bild -----------------*/
 
 .logo {
     padding-top: 17px;
@@ -145,14 +149,41 @@ header a.categoriezwei.active {
     align-items: center;
 }
 
-.headerImg {
-    background-image: url(img/Header2_neu.png);
-    width: 100%;
-    height: 800px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 60px;
+.headerImg1 {
+    background-image: url(img/Header/Header2.jpg);
+}
+
+.headerImg2 {
+  background-image: url(img/Header/Original.jpg);
+}
+
+.headerImg3 {
+  background-image: url(img/Header/Header1.jpg);
+}
+
+.headerImg4 {
+  background-image: url(img/Header/Header4.jpg);
+}
+
+.headerImg5 {
+  background-image: url(img/Header/Header10.jpg);
+}
+
+.headerImg6 {
+  background-image: url(img/Header/Header13.jpg);
+}
+
+.headerImg7 {
+  background-image: url(img/Header/Header9.jpg);
+}
+
+.header {
+  width: 100%;
+  height: 1000px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
 }
 
 .shadowHeader {
@@ -248,39 +279,6 @@ li {
     height: 100%;
     object-fit: cover;
   }
-  
-  /*
-  .card_price {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 0.25rem;
-    background-color: #365581;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  
-  .card_price span {
-    font-size: 12px;
-    margin-top: -2px;
-  }
-
-  .note {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    padding: 4px 8px;
-    border-radius: 0.25rem;
-    background-color: #365581;
-    font-size: 14px;
-    font-weight: 700;
-  }
-   */
 
   .cardnew {
     background-color: white;
@@ -402,17 +400,16 @@ blockquote:after {
 }
 
 blockquote:before {
-	content: '“';
+	content: url(img/Fuss-01_blau_hoch.svg);
 	left: -5rem;
 	top: -2rem;
 }
 
 blockquote:after {
-	content: '”';
+	content: url(img/Fuss-01_blau_hoch2.svg);
 	right: -5rem;
 	bottom: 1rem;
 }
-
 cite {
 	line-height: 3;
 	text-align: left;
@@ -439,6 +436,12 @@ footer {
 
 .FooterText {
     align-items: center;
+}
+
+/* ---------------- IMG ----------------*/
+
+.imgMarianne {
+  margin-left: 50px;
 }
 
 /*---------------- media ----------------*/
@@ -513,6 +516,14 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .flex {
+      flex-direction: column;
+    }
+
+    .imgMarianne {
+      margin-left: 0;
+    }
 }
 
 @media (max-width: 750px) {
@@ -533,5 +544,13 @@ footer {
     .listebild {
         border-top: none;
         border-radius: 0px 0px 5px 5px;
+    }
+
+    .flex {
+      flex-direction: column;
+    }
+
+    .imgMarianne {
+      margin-left: 0;
     }
 }
