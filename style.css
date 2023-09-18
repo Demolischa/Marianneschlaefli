@@ -35,7 +35,7 @@ time, mark, audio, video {
 h1 {
     font-family: 'Special Elite', cursive;
     color: #365581;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
 }
 
@@ -262,6 +262,18 @@ li {
     height: 280px;
 }
 
+.list {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.list_container {
+  display: flex; 
+  margin-bottom: 15px;
+}
+
 /*----------------- flip card ------------------*/
 
   .cards_item {
@@ -279,6 +291,123 @@ li {
     height: 100%;
     object-fit: cover;
   }
+
+  /* ------------- card Community ------------- */
+
+  .card_community_border {
+    border: 3px solid #F57FC1;
+  }
+
+  .card_community {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #F57FC1;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .card_community_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #F57FC1;
+    margin-right: 10px;
+  }
+  
+  .card_community span {
+    font-size: 12px;
+    margin-top: -2px;
+  }
+
+  /* ------------- card tools ------------- */
+
+  .card_tools_border {
+    border: 3px solid #365581;
+  }
+
+  .card_tools {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #365581;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .card_tools_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #365581;
+    margin-right: 10px;
+  }
+  
+  .card_tools span {
+    font-size: 12px;
+    margin-top: -2px;
+  }
+
+  .fa {
+    color: white;
+  }
+
+  /* ------------- card work ------------- */
+
+  .card_work_border {
+    border: 3px solid #3BA836;
+  }
+
+  .card_work {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #3BA836;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .card_work_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #3BA836;
+    margin-right: 10px;
+  }
+
+  .card_work span {
+    font-size: 12px;
+    margin-top: -2px;
+  }
+
+/* ------------- end ------------- */
 
   .cardnew {
     background-color: white;
@@ -524,6 +653,19 @@ footer {
     .imgMarianne {
       margin-left: 0;
     }
+
+    .header {
+      height: 500px;
+    }
+
+    .list_container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .list {
+      padding-bottom: 10px;
+    }
 }
 
 @media (max-width: 750px) {
@@ -552,5 +694,18 @@ footer {
 
     .imgMarianne {
       margin-left: 0;
+    }
+
+    .header {
+      height: 500px;
+    }
+
+    .list_container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .list {
+      padding-bottom: 10px;
     }
 }
