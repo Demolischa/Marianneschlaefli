@@ -47,10 +47,10 @@ if (isset($_POST['delete']) && $_POST['delete']){
 if (isset($_POST["kf-km"]) && $_POST["kf-km"]) {
 
 	// clean data
-	$name		= stripslashes($_POST["name"]);
-	$email		= stripslashes($_POST["email"]);
-	$telefon		= stripslashes($_POST["telefon"]);
-	$ort		= stripslashes($_POST["ort"]);
+	$vorname   	= stripslashes($_POST["vorname"]);
+	$name      	= stripslashes($_POST["name"]);
+	$telefon   	= $_POST["telefon"];
+	$email      = stripslashes($_POST["email"]);
 	$betreff   	= stripslashes($_POST["betreff"]);
 	$nachricht  = stripslashes($_POST["nachricht"]);
 	if($cfg['DATENSCHUTZ_ERKLAERUNG']) { $datenschutz = stripslashes($_POST["datenschutz"]); }
@@ -65,7 +65,11 @@ if (isset($_POST["kf-km"]) && $_POST["kf-km"]) {
 	$host = getHostByAddr($remote);
 
 
-	// formcheck	
+	// formcheck
+	if(!$vorname) {
+		$fehler['vorname'] = "<span class='errormsg'><strong>Pflichtfeld</strong></span>";
+	}
+	
 	if(!$name) {
 		$fehler['name'] = "<span class='errormsg'><strong>Pflichtfeld</strong></span>";
 	}
@@ -281,13 +285,12 @@ if (isset($_POST["kf-km"]) && $_POST["kf-km"]) {
 		// ------------------------------------------------------------
 
 		// ---- create mail-message for admin
-	 $mailcontent  = "Folgendes wurde am ". $date ." Uhr per Formular geschickt:\n" . "-------------------------------------------------------------------------\n\n";
-   $mailcontent .= "Name: " . $name . "\n";
-   $mailcontent .= "E-Mail: " . $email . "\n\n";
-   $mailcontent .= "Telefon: " . $telefon . "\n";
-   $mailcontent .= "Ort: " . $ort . "\n";
-   $mailcontent .= "\nBetreff: " . $betreff . "\n";
-   $mailcontent .= "Nachricht:\n" . $nachricht = preg_replace("/\r\r|\r\n|\n\r|\n\n/","\n",$nachricht) . "\n\n";
+	  $mailcontent  = "Folgendes wurde am ". $date ." Uhr per Formular geschickt:\n" . "-------------------------------------------------------------------------\n\n";
+		$mailcontent .= "Name: " . $vorname . " " . $name . "\n\n";
+		$mailcontent .= "E-Mail: " . $email . "\n";
+		$mailcontent .= "Telefon: " . $telefon . "\n";
+		$mailcontent .= "\nBetreff: " . $betreff . "\n";
+		$mailcontent .= "Nachricht:\n" . $nachricht = preg_replace("/\r\r|\r\n|\n\r|\n\n/","\n",$nachricht) . "\n\n";
 		if(count($uploadedFiles) > 0){
 			if(2==$cfg['UPLOAD_ACTIVE']){
 				$mailcontent .= "\n\n";
@@ -336,7 +339,7 @@ if (isset($_POST["kf-km"]) && $_POST["kf-km"]) {
                 $smtp['debug']
             );
         } else {
-            $success = sendMyMail($email, $name, $empfaenger, $betreff, $mailcontent, $attachments);
+            $success = sendMyMail($email, $vorname." ".$name, $empfaenger, $betreff, $mailcontent, $attachments);
         }
 
     	// ------------------------------------------------------------
@@ -352,16 +355,12 @@ if (isset($_POST["kf-km"]) && $_POST["kf-km"]) {
 
     		// ---- create mail-message for customer
 			$mailcontent  = "Vielen Dank für Ihre E-Mail. Wir werden schnellstmöglich darauf antworten.\n\n";
-			$mailcontent .= "Zusammenfassung: \n" .
-
-  "-------------------------------------------------------------------------\n\n";
-
-   $mailcontent .= "Name: " . $name . "\n";
-   $mailcontent .= "E-Mail: " . $email . "\n\n";
-   $mailcontent .= "Telefon: " . $telefon . "\n";
-   $mailcontent .= "Ort: " . $ort . "\n";
-   $mailcontent .= "\nBetreff: " . $betreff . "\n";
-   $mailcontent .= "Nachricht:\n" . str_replace("\r", "", $nachricht) . "\n\n";
+    		$mailcontent .= "Zusammenfassung: \n" .  "-------------------------------------------------------------------------\n\n";
+    		$mailcontent .= "Name: " . $vorname . " " . $name . "\n\n";
+    		$mailcontent .= "E-Mail: " . $email . "\n";
+    		$mailcontent .= "Telefon: " . $telefon . "\n";
+    		$mailcontent .= "\nBetreff: " . $betreff . "\n";
+    		$mailcontent .= "Nachricht:\n" . str_replace("\r", "", $nachricht) . "\n\n";
     		if(count($uploadedFiles) > 0){
     			$mailcontent .= 'Sie haben folgende Dateien übertragen:'."\n";
     			foreach($uploadedFiles as $file){
@@ -535,51 +534,51 @@ if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chr
 			?>
 
 
-		
+
+
+
 
 
 
 
 
 			<div class="row">
+				<div class="col-sm-4 <?php echo (isset($_POST['vorname']) && ''!=$_POST['vorname'] ? 'not-empty-field ' : ''); ?> <?php if ($fehler["vorname"] != "") { echo 'error'; } ?>">
+					<label class="control-label" for="border-right4"><i id="user-icon" class="material-icons">account_circle</i><span>Vorname *</span></label>
+					<input onclick="setActive(this);" onfocus="setActive(this);" <?php if($cfg['HTML5_FEHLERMELDUNGEN']) { ?> required <?php }else{ ?> onchange="checkField(this)" <?php } ?> aria-label="Vorname" type="text" name="vorname" class="field"  placeholder="" value="<?php echo $_POST['vorname']; ?>" maxlength="<?php echo $zeichenlaenge_vorname; ?>" id="border-right4" />
+					<?php if ($fehler["vorname"] != "") { echo $fehler["vorname"]; } ?>
+				</div>
 				<div class="col-sm-4 <?php echo (isset($_POST['name']) && ''!=$_POST['name'] ? 'not-empty-field ' : ''); ?> <?php if ($fehler["name"] != "") { echo 'error'; } ?>">
-					<label class="control-label" for="border-right5"><i id="user-icon" class="material-icons">account_circle</i><span>Name *</span></label>
+					<label class="control-label" for="border-right5"><i id="user-icon" class="material-icons">account_circle</i><span>Nachname *</span></label>
 					<input onclick="setActive(this);" onfocus="setActive(this);" <?php if($cfg['HTML5_FEHLERMELDUNGEN']) { ?> required <?php }else{ ?> onchange="checkField(this)" <?php } ?> type="text" name="name" class="field" placeholder="" value="<?php echo $_POST['name']; ?>" maxlength="<?php echo $zeichenlaenge_name; ?>" id="border-right5" />
 					<?php if ($fehler["name"] != "") { echo $fehler["name"]; } ?>
-				</div>
-				<div class="col-sm-4 <?php echo (isset($_POST['email']) && ''!=$_POST['email'] ? 'not-empty-field ' : ''); ?> <?php if ($fehler["email"] != "") { echo 'error'; } ?>">
-					<label class="control-label" for="border-right6"><i id="email-icon" class="material-icons">email</i><span>E-Mail *</span></label>
-					<input onclick="setActive(this);" onfocus="setActive(this);" <?php if($cfg['HTML5_FEHLERMELDUNGEN']) { ?> required <?php }else{ ?> onchange="checkField(this)" <?php } ?> aria-label="E-Mail" type="<?php if($cfg['HTML5_FEHLERMELDUNGEN']) { echo 'email'; }else{ echo 'text'; } ?>" name="email" class="field" placeholder="" value="<?php echo $_POST['email']; ?>" maxlength="<?php echo $zeichenlaenge_email; ?>" id="border-right6" />
-					<?php if ($fehler["email"] != "") { echo $fehler["email"]; } ?>
 				</div>
 			</div>
 
 
 
-
-	<div class="row">
-				
-				<div class="col-sm-4 <?php echo (isset($_POST['ort']) && ''!=$_POST['ort'] ? 'not-empty-field ' : ''); ?> ">
-					<label class="control-label" for="border-right4"><i id="home-icon" class="material-icons">home</i><span>Ort</span></label>
-					<input onclick="setActive(this);" onfocus="setActive(this);" aria-label="Ort" type="text" name="ort" class="field" placeholder="" value="<?php echo $_POST['ort']; ?>" maxlength="<?php echo $zeichenlaenge_ort; ?>" id="border-right4" />
-					
-				</div>				
+			<div class="row">
+				<div class="col-sm-4 <?php echo (isset($_POST['email']) && ''!=$_POST['email'] ? 'not-empty-field ' : ''); ?> <?php if ($fehler["email"] != "") { echo 'error'; } ?>">
+					<label class="control-label" for="border-right6"><i id="email-icon" class="material-icons">email</i><span>E-Mail *</span></label>
+					<input onclick="setActive(this);" onfocus="setActive(this);" <?php if($cfg['HTML5_FEHLERMELDUNGEN']) { ?> required <?php }else{ ?> onchange="checkField(this)" <?php } ?> aria-label="E-Mail" type="<?php if($cfg['HTML5_FEHLERMELDUNGEN']) { echo 'email'; }else{ echo 'text'; } ?>" name="email" class="field" placeholder="" value="<?php echo $_POST['email']; ?>" maxlength="<?php echo $zeichenlaenge_email; ?>" id="border-right6" />
+					<?php if ($fehler["email"] != "") { echo $fehler["email"]; } ?>
+				</div>
 				<div class="col-sm-4 <?php echo (isset($_POST['telefon']) && ''!=$_POST['telefon'] ? 'not-empty-field ' : ''); ?>">
 					<label class="control-label" for="border-right7"><i id="phone-icon" class="material-icons">phone</i><span>Telefon/Mobil</span></label>
 					<input onclick="setActive(this);" onfocus="setActive(this);" aria-label="Telefon" type="text" name="telefon" class="field" placeholder="" value="<?php echo $_POST['telefon']; ?>" maxlength="<?php echo $zeichenlaenge_telefon; ?>" id="border-right7" />
 				</div>
 			</div>
 			
+		
 
-
-
-				<div class="row">
+		   <div class="row">
 				<div class="col-sm-8 <?php echo (isset($_POST['betreff']) && ''!=$_POST['betreff'] ? 'not-empty-field ' : ''); ?> <?php if ($fehler["betreff"] != "") { echo 'error'; } ?>">
 					<label class="control-label" for="border-right8"><i id="subject-icon" class="material-icons">edit</i><span>Betreff *</span></label>
 					<input onclick="setActive(this);" onfocus="setActive(this);" <?php if($cfg['HTML5_FEHLERMELDUNGEN']) { ?> required <?php }else{ ?> onchange="checkField(this)" <?php } ?> aria-label="Betreff" type="text" name="betreff" class="field" placeholder="" value="<?php echo $_POST['betreff']; ?>" maxlength="<?php echo $zeichenlaenge_betreff; ?>" id="border-right8" />
 					<?php if ($fehler["betreff"] != "") { echo $fehler["betreff"]; } ?>
 				</div>
 			</div>
+				
 			
 			
 

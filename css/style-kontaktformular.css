@@ -189,24 +189,24 @@ body.safari .kontaktformular .row .not-empty-field .control-label span{	/* Label
 
 
 .kontaktformular .row .active-field .control-label i{
-	color: #26a69a;
+	color: #365581;
 }
 
 
 body.safari .kontaktformular .row .active-field .control-label i{
-	color: #26a69a !important;
+	color: #365581 !important;
 }
 
 
 .kontaktformular .row .active-field .control-label span{
-	color: #26a69a;
+	color: #365581;
 	top: 0rem;
 	font-size: 0.7rem;
 }
 
 
 body.safari .kontaktformular .row .active-field .control-label span{	/* Labels im aktiven Zustand */
-	color: #26a69a !important;
+	color: #365581 !important;
 	top: -6px !important;
 	font-size: 0.7rem !important;
 }

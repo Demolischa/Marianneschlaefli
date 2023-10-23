@@ -110,13 +110,13 @@ header a {
 
 header a.categorieeins:hover {
     color: black;
-    background-image: url(img/Fuss-02.svg);
+    background-image: url(../img/Fuss-02.svg);
     background-size: 100% 100%;
 }
 
 header a.categorieeins.active {
     color: #365581;
-    background-image: url(img/Fuss-02.svg);
+    background-image: url(../img/Fuss-02.svg);
     background-size: 100% 100%;
 }
 
@@ -124,13 +124,13 @@ header a.categorieeins.active {
 
 header a.categoriezwei:hover {
     color: black;
-    background-image: url(img/Fuss-01.svg);
+    background-image: url(../img/Fuss-01.svg);
     background-size: 100% 100%;
 }
 
 header a.categoriezwei.active {
     color: #365581;
-    background-image: url(img/Fuss-01.svg);
+    background-image: url(../img/Fuss-01.svg);
     background-size: 100% 100%;
 }
 
@@ -150,32 +150,32 @@ header a.categoriezwei.active {
 }
 
 .headerImg1 {
-    background-image: url(img/Header/Header2.jpg);
+    background-image: url(../img/Header/Header2.jpg);
 }
 
 .headerImg2 {
-  background-image: url(img/Header/Original.jpg);
+  background-image: url(../img/Header/Original.jpg);
 }
 
 .headerImg3 {
-  background-image: url(img/Header/Header1.jpg);
+  background-image: url(../img/Header/Header1.jpg);
 }
 
 .headerImg4 {
-  background-image: url(img/Header/Header4.jpg);
+  background-image: url(../img/Header/Header4.jpg);
 }
 
 .headerImg5 {
-  background-image: url(img/Header/Header20_2.jpg);
+  background-image: url(../img/Header/Header20_2.jpg);
   background-position: center!important;
 }
 
 .headerImg6 {
-  background-image: url(img/Header/Header13.jpg);
+  background-image: url(../img/Header/Header13.jpg);
 }
 
 .headerImg7 {
-  background-image: url(img/Header/Header9.jpg);
+  background-image: url(../img/Header/Header9.jpg);
 }
 
 .header {
@@ -210,13 +210,13 @@ header a.categoriezwei.active {
   margin: 100px 0;
   width: 500px;
   height: 200px;
-  background-image: url(img/Fuss-01.svg);
+  background-image: url(../img/Fuss-01.svg);
   background-size: 100% 100%;
   cursor: pointer;
 }
 
 .containerButton:hover {
-    background-image: url(img/Fuss-01_blau.svg);
+    background-image: url(../img/Fuss-01_blau.svg);
 }
 
 .containerButton a {
@@ -530,13 +530,13 @@ blockquote:after {
 }
 
 blockquote:before {
-	content: url(img/Fuss-01_blau_hoch.svg);
+	content: url(../img/Fuss-01_blau_hoch.svg);
 	left: -5rem;
 	top: -2rem;
 }
 
 blockquote:after {
-	content: url(img/Fuss-01_blau_hoch2.svg);
+	content: url(../img/Fuss-01_blau_hoch2.svg);
 	right: -5rem;
 	bottom: 1rem;
 }
@@ -576,6 +576,13 @@ footer {
 
 .imgMarianne img {
   border-radius: 4px;
+}
+
+.kontaktformular {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*---------------- media ----------------*/
