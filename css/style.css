@@ -197,8 +197,8 @@ header a.categoriezwei.active {
     margin: 0 200px;
 }
 
-.container_kontakt {
-    margin: 0 550px;
+center {
+  width: 700px;
 }
 
 .center {
@@ -606,6 +606,10 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    center {
+      width: 700px;
+    }
 }
 
 @media (max-width: 790px) {
@@ -682,6 +686,10 @@ footer {
     .list {
       padding-bottom: 10px;
     }
+
+    center {
+      width: 500px;
+    }
 }
 
 @media (max-width: 750px) {
@@ -723,5 +731,9 @@ footer {
 
     .list {
       padding-bottom: 10px;
+    }
+
+    center {
+      width: 400px;
     }
 }
