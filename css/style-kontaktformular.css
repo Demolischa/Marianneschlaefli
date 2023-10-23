@@ -106,7 +106,7 @@ margin: 0 1.7rem;
 				position: absolute;
 				margin-top: -8.5px; height: 95.4%;
 				padding: 0.8rem;
-				color: grey;
+				color: #B1CBF0;
 				opacity: 0.7;
 				width: 3rem;
 				z-index: 2;
@@ -175,14 +175,14 @@ body.safari .kontaktformular .row .not-empty-field .control-label i{
 
 
 .kontaktformular .row .not-empty-field .control-label span{
-	color: grey;
+	color: #B1CBF0;
 	top: 0rem;
 	font-size: 0.7rem;
 }
 
 
 body.safari .kontaktformular .row .not-empty-field .control-label span{	/* Labels im inaktiven aber nicht leeren Zustand */
-	color: grey !important;
+	color: #B1CBF0 !important;
 	top: -6px !important;
 	font-size: 0.7rem !important;
 }
@@ -265,7 +265,7 @@ body.safari .kontaktformular .row .field {
 
 .kontaktformular .row .field:focus,
 .kontaktformular .row input[type="checkbox"]:focus {
-				border-bottom-color: #26a69a !important;
+				border-bottom-color: #365581 !important;
 				outline: 0 !important;
 				box-shadow: none;
 				
@@ -343,7 +343,7 @@ body.safari .kontaktformular .row .textarea-label{
 
 
 	.kontaktformular .row ul.select-box .placeholder{
-		color: grey;
+		color: #B1CBF0;
 		opacity: 0.7;
 	}
 
@@ -363,7 +363,7 @@ body.safari .kontaktformular .row .textarea-label{
 	.kontaktformular .row ul.select-box li{
 		list-style: none;
 		padding: 11px 15px;
-		color: #26a69a;
+		color: #365581;
 		width: 100%;
 	}
 	
@@ -486,7 +486,7 @@ body.safari .kontaktformular .question-row .control-label span{
 			margin-right: .5rem;
 			padding: .5rem .75rem;
 			color: white;
-			background-color: #26a69a;
+			background-color: #365581;
 			border-radius: 2px;
 			border: none;
 			text-transform: uppercase;
@@ -498,7 +498,7 @@ body.safari .kontaktformular .question-row .control-label span{
 		
 		
 		.kontaktformular .row #files .file_button:hover {
-			background-color: #1d9185;
+			background-color: #365581;
 		}
 		
 		
@@ -577,20 +577,20 @@ body.safari .kontaktformular .question-row .control-label span{
 
 
 .kontaktformular .checkbox-row .checkbox-inline .material-icons.checked{
-				color: #26a69a;
+				color: #365581;
 }
 
 
 .kontaktformular .checkbox-row .checkbox-inline a:hover,
 .kontaktformular .checkbox-row .checkbox-inline a:focus {
-				color: #1d9185;
+				color: #365581;
 				text-decoration: underline;
 }
 
 
 .kontaktformular .checkbox-row .checkbox-inline a,
 .kontaktformular .checkbox-row .checkbox-inline span {
-				color: #26a69a;
+				color: #365581;
 				text-decoration: none;
 				line-height: 150%;				
 }
@@ -648,7 +648,7 @@ body.safari .kontaktformular .question-row .control-label span{
 					margin-top: calc(1rem/16*5);
 					padding: .5rem .75rem;
 					color: white;
-					background-color: #26a69a;
+					background-color: #365581;
 					border-radius: 2px;
 					border: none;
 					text-transform: uppercase;
@@ -657,7 +657,7 @@ body.safari .kontaktformular .question-row .control-label span{
 	
 	
 	.kontaktformular .row .senden:hover {
-					background-color: #1d9185;
+					background-color: #365581;
 					cursor: pointer;
 	}
 
