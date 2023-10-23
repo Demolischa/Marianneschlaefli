@@ -166,7 +166,8 @@ header a.categoriezwei.active {
 }
 
 .headerImg5 {
-  background-image: url(img/Header/Header10.jpg);
+  background-image: url(img/Header/Header20_2.jpg);
+  background-position: center!important;
 }
 
 .headerImg6 {
@@ -571,6 +572,10 @@ footer {
 
 .imgMarianne {
   margin-left: 50px;
+}
+
+.imgMarianne img {
+  border-radius: 4px;
 }
 
 /*---------------- media ----------------*/
