@@ -197,6 +197,10 @@ header a.categoriezwei.active {
     margin: 0 200px;
 }
 
+.container_kontakt {
+    margin: 0 500px;
+}
+
 .center {
     display: flex;
     flex-direction: column;
