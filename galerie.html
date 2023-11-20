@@ -4,14 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Galerie - Marianne Schläfli</title>
-        <!-- Gurajada -->
+        <!-- Teko -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gurajada&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
         
         <!-- Inter -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,11 +18,39 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
+    <!-- Telefon 13.11.2023 -->
+    <!-- 
+        Fix - Fit im Schuh
+
+        Telefon kommt noch
+        E-Mail wird noch hinterlegt
+
+        Kontaktformular E-Mail umstellen
+
+
+        Galerie
+
+        Geschichte mehr zeigen
+        Bei Hobelbank
+        Bei Ambos
+
+
+        Grossvater Hans bei Hobelbank
+
+        Galerie umbauen das die Geschichte in einer Card erzählt wird mit durchklicken durch die verschiedene Bilder
+
+        Bildschirm 44cm
+
+        Bild von Kategorie Fuss mit Bild von Kategorie tauschen 
+
+        Bilder Kategorie Fuss anschauen - grösse hat sich geändert
+      -->
+
     <body>
         <header class="shadowHeader">
             <a href="#default" class="logo">
-                <h1>Fit im Schuh</h1>
-                <h2>Marianne Schläfli</h2>
+                <img src="img/Logo.png" alt="Logo Marianne Schläfli Fit im Schuh" style="height: 100px;">
             </a>
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" style="width: 16px;" class="icon" onclick="myFunction()">
@@ -98,7 +122,45 @@
                   </div>
                 </div>
               </li>
-              <li class="cards_item">
+              <div class="cards_item maxwidth maxheight660">
+                <div class="slideshow cardnew card_tools_border">
+                    <div id="ambos-1" class="slide">
+                        <a href="#ambos-3"></a>
+                        <a href="#ambos-2"></a>
+                            <img src="img/Galerie/P1110245.JPG" alt="Ambos mit Rost"/>
+                            <span class="card_tools"><i class="fa faw fa-wrench" aria-hidden="true"></i></span>
+                            <div class="card_content">
+                                <div class="card_text">
+                                <h3 style="text-align: center; color: #5B82BA;">Der Ambos</h3>
+                                <p style="text-align: center;">Die Geschichte des Ambos</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="ambos-2" class="slide">
+                        <a href="#ambos-1"></a>
+                        <a href="#ambos-3"></a>
+                            <img src="img/Galerie/IMG_0021.jpg" alt="Ambos restauriert"/>
+                            <span class="card_tools"><i class="fa faw fa-wrench" aria-hidden="true"></i></span>
+                            <div class="card_content">
+                                <div class="card_text">
+                                  <p>Der Ambos, kam ursprünglich von einem Schuhmacher und wurde etwa um 1950 angeschafft. Mit der Zeit wurde er etwas rostig und durch einen guten Freund konnte ich den Ambos wieder auffrischen. Er schlug mir das reinigen und versiegeln vor, da man die Gebrauchsspuren noch erkennen kann und er so aussieht wie er produziert wurde.</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="ambos-3" class="slide">
+                      <a href="#ambos-2"></a>
+                      <a href="#ambos-1"></a>
+                          <img src="img/Galerie/ambos.jpg" alt="Ambos"/>
+                          <span class="card_tools"><i class="fa faw fa-wrench" aria-hidden="true"></i></span>
+                          <div class="card_content">
+                              <div class="card_text">
+                                <p>Auf diesem Bild ist der Ambos zu sehen. Diesmal frisch restauriert und ohne Rost</p>
+                              </div>
+                          </div>
+                  </div>
+                </div>
+            </div>
+          <!--    <li class="cards_item">
                 <div class="cardnew maxwidth card_tools_border">
                     <div class="card_image">
                         <img src="img/Galerie/P1110245.JPG" alt="Ambos mit Rost" />
@@ -123,7 +185,7 @@
                     </div>
                   </div>
                 </div>
-              </li>
+              </li> -->
               <li class="cards_item">
                 <div class="cardnew maxwidth card_work_border">
                     <div class="card_image">
@@ -189,7 +251,40 @@
                   </div>
                 </div>
               </li>
-              <li class="cards_item">
+
+              <div class="cards_item maxwidth maxheight550">
+                <div class="slideshow cardnew card_work_border">
+                    <div id="handicap-1" class="slide">
+                        <a href="#handicap-2"></a>
+                        <a href="#handicap-2"></a>
+                            <img src="img/Galerie/DSCN0677.JPG" alt="Ambos mit Rost"/>
+                            <span class="card_work"><i class="fa faw fa-user" aria-hidden="true"></i></span>
+                            <div class="card_content">
+                                <div class="card_text">
+                                <h3 style="text-align: center; color: #45A940;">Skifahren mit Handicap</h3>
+                                <p style="text-align: center;">Kunde kann nur auf den Zehen stehen</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="handicap-2" class="slide">
+                        <a href="#handicap-1"></a>
+                        <a href="#handicap-1"></a>
+                            <img src="img/Galerie/DSCN0678.JPG" alt="Ambos restauriert"/>
+                            <span class="card_work"><i class="fa faw fa-user" aria-hidden="true"></i></span>
+                            <div class="card_content">
+                                <div class="card_text">
+                                  <p>Der Kunde kann nur auf den Zehen stehen, ist ein Geburtsgebrechen.
+                                    Er durfte trotz Handicap das Skifahren erlernen.
+                                    Bis er zu mir kahm, fuhr er ohne Einlagen nur auf den Zehen Ski.
+                                    Die Kraft, die das braucht kann man sich nicht vorstellen.
+                                    Ich passte die Schale auf seinen breiten Vorderfuss an und baute Ihm Keile.
+                                    Ich habe für diesen Kunden 3 verschiedene Keile nach seinen Bedürfnissen gebaut.</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!--      <li class="cards_item">
                 <div class="cardnew maxwidth card_work_border">
                     <div class="card_image">
                         <img src="img/Galerie/DSCN0678.JPG" alt="Kunde mit Geburtsgebrechen - brauchte 3 verschiedene Keile" />
@@ -207,8 +302,46 @@
                     </div>
                   </div>
                 </div>
-              </li>
-              <li class="cards_item">
+              </li> -->
+              <div class="cards_item maxwidth maxheight550">
+                <div class="slideshow cardnew card_tools_border">
+                    <div id="werkbank-1" class="slide">
+                        <a href="#werkbank-3"></a>
+                        <a href="#werkbank-2"></a>
+                            <img src="img/Galerie/Hobelbank.jpg" alt="Werkbank"/>
+                            <span class="card_tools"><i class="fa faw fa-wrench" aria-hidden="true"></i></span>
+                            <div class="card_content">
+                                <div class="card_text">
+                                <h3 style="text-align: center; color: #5B82BA;">Die Werkbank</h3>
+                                <p style="text-align: center;">Die Geschichte der Werkbank</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="werkbank-2" class="slide">
+                        <a href="#werkbank-1"></a>
+                        <a href="#werkbank-3"></a>
+                            <img src="img/Galerie/IMG-20231023-WA0018_2.jpg" alt="Werkbank"/>
+                            <span class="card_tools"><i class="fa faw fa-wrench" aria-hidden="true"></i></span>
+                            <div class="card_content">
+                                <div class="card_text">
+                                  <p>Die Hobelbank hatte der Grossvater Schläfli ca. 1951 erstanden. Seither ist sie über jede Generation gebraucht worden und über meinen Vater zu mir gekommen.</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="werkbank-3" class="slide">
+                      <a href="#werkbank-2"></a>
+                      <a href="#werkbank-1"></a>
+                          <img src="img/Galerie/IMG-20231023-WA0012_2.jpg" alt="Werkbank"/>
+                          <span class="card_tools"><i class="fa faw fa-wrench" aria-hidden="true"></i></span>
+                          <div class="card_content">
+                              <div class="card_text">
+                                <p>Restauriert von meinem Lebenspartner und mit den weissen Kisten erweitert durch Hans.</p>
+                              </div>
+                          </div>
+                  </div>
+                </div>
+            </div>
+         <!--     <li class="cards_item">
                 <div class="cardnew maxwidth card_tools_border">
                     <div class="card_image">
                         <img src="img/Galerie/Hobelbank.jpg" alt="Restaurierte Hobelbank" />
@@ -220,7 +353,7 @@
                     </div>
                   </div>
                 </div>
-              </li>
+              </li> -->
               <li class="cards_item">
                 <div class="cardnew maxwidth card_work_border">
                     <div class="card_image">
