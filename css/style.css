@@ -279,6 +279,11 @@ li {
   margin-bottom: 15px;
 }
 
+a:link {
+  color: #365581;
+  text-decoration: none;
+}
+
 /*----------------- flip card ------------------*/
 
   .cards_item {

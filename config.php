@@ -1,6 +1,6 @@
 <?php
 
-$empfaenger = "m.schlaefli@gmx.ch";  // Bitte tragen Sie hier Ihre E-Mail Adresse ein. (zwischen den Anführungszeichen)
+$empfaenger = "fitimschuh@gmx.ch";  // Bitte tragen Sie hier Ihre E-Mail Adresse ein. (zwischen den Anführungszeichen)
 
 $ihrname = "Fit im Schuh";  // Bitte tragen Sie hier Ihren Namen ein. (zwischen den Anführungszeichen) Dieser erscheint als Absender in der Danke Mail.
 
