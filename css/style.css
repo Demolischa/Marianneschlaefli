@@ -466,6 +466,7 @@ a:link {
     top: calc(50% - 5px);
     width: 10px;
   }
+
   .slideshow a:first-child:after {
     content: '';
     left: 10px;
